@@ -1,0 +1,64 @@
+@media (max-width: 810px) {
+    .main {
+        padding: 40px 0 60px;
+        &__text {
+            grid-column: 1 /span 12;
+            background-image: url(../images/cup.png);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 10px 20px;
+            h3 {
+                font-size: 2.8rem;
+                margin: 0 0 40px;
+            }
+            p {
+                color: $dark-blue-color;
+                line-height: 2rem;
+            }
+        }
+        &__img {
+           display: none;
+        }
+    }
+}
+@media (max-width: 650px){
+    .header {
+        &__logo {
+            grid-column: 1 / span 3;
+        }
+        &__btn {
+            grid-column: 10 /span 2;;
+        }
+        .nav {
+            grid-column: 4 /span 6;
+            
+        }
+    }
+}
+@media (max-width: 650px){
+    .form {
+        &__wrapper {
+            grid-column: 3/span 8;
+            grid-template-columns: repeat(8, 1fr);
+
+            form {
+                grid-column: 2/span 6;
+            }
+        }
+        
+    }
+}
+@media (max-width: 500px){
+    .form {
+        &__wrapper {
+            grid-column: 2/span 10;
+            grid-template-columns: repeat(10, 1fr);
+
+            form {
+                grid-column: 2/span 8;
+            }
+        }
+        
+    }
+}

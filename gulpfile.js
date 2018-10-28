@@ -12,6 +12,7 @@ var path = {
         html: 'build/',
         js: 'build/js/',
         css: 'build/css/',
+        other: 'build/slick/',
         img: 'build/images/',
         fonts: 'build/fonts/'
     },
@@ -19,7 +20,8 @@ var path = {
         html: 'src/index.html', 
         js: 'src/js/*.js',
         style: 'src/style/main.scss',
-        css: 'src/style/*.css',
+        css: 'src/style/**/*.css',
+        other: 'src/slick/**/*.*',
         img: 'src/images/*.*', 
         fonts: 'src/fonts/*.*'
     },
@@ -77,11 +79,16 @@ gulp.task('fonts', function() {
         .pipe(gulp.dest(path.build.fonts))
 });
 
+gulp.task('other', function() {
+    gulp.src(path.src.other)
+        .pipe(gulp.dest(path.build.other))
+});
+
 gulp.task('clean', function() {
     return del.sync(path.clean); 
 });
 
-gulp.task('build', ['clean', 'html', 'scripts', 'styles', 'css', 'fonts', 'images']);
+gulp.task('build', ['clean', 'html', 'scripts', 'styles', 'css', 'fonts', 'images', 'other']);
 
 gulp.task('watch', function(){
     gulp.watch(path.watch.style, ['styles']); 
