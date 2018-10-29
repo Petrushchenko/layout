@@ -103,6 +103,10 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
                         <select >
                            <option value="" disabled selected>Country</option>
                            <option value="1">Country 1</option>
+                           <option value="2">Country 2</option>
+                           <option value="3">Country 3</option>
+                           <option value="4">Country 4</option>
+                           <option value="5">Country 5</option>
                         </select>
                         <button type="submit" class="btn">enter</button>  
                     </form>
@@ -116,7 +120,9 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
     <div class="modal">
         <div class="modal__btn"></div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.js"></script>
     <script src="js/slick.min.js"></script> 
     <script src="js/jquery.selectric.js"></script>
    
@@ -127,16 +133,27 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
         $(document).ready(function () {
             $('select').selectric({
                disableOnMobile: false,
-               nativeOnMobile: false 
+               nativeOnMobile: false,
+               maxHeight: 100,
+                responsive: true,
+                inheritOriginalWidth: true
             });
             $('.slider').slick({
                 appendArrows: $('.arrows .container'),
                 dots: true
 
             });
+            $(".selectric").niceScroll({
+                cursorcolor:"#6dc0c8", 
+                background:"#ecedee", 
+                autohidemode:"false", 
+                cursorborder:"none", 
+                cursorborderradius:"none"
+              });
         });
     </script>
 
+       
 </body>
 
 </html>

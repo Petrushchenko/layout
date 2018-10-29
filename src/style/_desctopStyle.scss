@@ -273,27 +273,28 @@ footer {
             transform: translateY(-50%) rotate(-45deg);
         }
     }
-}
-.modal.opened {
-    visibility: visible;
-    opacity: 0.9;
-    justify-content: center;
-    transform: translateY(0) ;
-    ul {
-        list-style-type: none;
-        text-align: center;
-        padding: 0;
-        margin: 0;
-        li {
-            display: block;
-            margin: 10px auto;
-            font-size: 1.8rem;
-            &:hover {
-                font-weight: bold;
+    &.opened {
+        visibility: visible;
+        opacity: 0.9;
+        justify-content: center;
+        transform: translateY(0) ;
+        ul {
+            list-style-type: none;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+            li {
+                display: block;
+                margin: 10px auto;
+                font-size: 1.8rem;
+                &:hover {
+                    font-weight: bold;
+                }
             }
         }
     }
 }
+
 .slick-list.draggable, .slick-track {
     height:100%;
 }
@@ -348,13 +349,31 @@ footer {
         background-color: transparent;
         width: 100%;
         position: static;
+        text-align: start;
+        
     }
     .selectric-items {
         border: none;
         background-color: $white-color;
-        width: 100%;
+        width: 100%!important;
+        outline: none;
+        border-radius: 3px;
+        border: 1px solid $gray-border-color;
+        .disabled {
+            display: none;
+        }
+        li {
+            font-size: 2rem;
+            padding: 15px 20px;
+            border-bottom: 1px solid $gray-border-color;
+            text-align: start;
+
+        }
     }
+
+    
 }
+
 .selectric-button {
     outline: none;
     border: none;
