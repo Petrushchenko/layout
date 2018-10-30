@@ -346,7 +346,6 @@ footer {
     outline: none;
     font-family:"Roboto-Light";
     font-size: 2rem;
-    padding: 15px 20px;
     background-color: $gray-background-color;
     border-width: 1px;
     border-style: solid;
@@ -360,6 +359,7 @@ footer {
         width: 100%;
         position: static;
         text-align: start;
+        padding: 15px 20px;
         
     }
     .selectric-items {
@@ -384,6 +384,7 @@ footer {
 }
 
 .selectric-button {
+    color: $gray-color;
     outline: none;
     border: none;
     background-color: transparent;
@@ -393,4 +394,19 @@ footer {
     padding:0;
     -webkit-appearance: none;
     appearance: none;
+}
+.nano {
+    z-index:10;
+    position:absolute;
+}
+.nano > .nano-pane {
+  background-color:$gray-scroll-color;
+  opacity: 1;
+  width: 5px;
+  right: 2px;
+}
+.nano > .nano-pane > .nano-slider {
+    background-color: $gray-color;
+    height: 45px;
+
 }
