@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Start</title>
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
-    
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+
     <link rel="stylesheet" type="text/css" href="css/selectric.css">
 
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
@@ -100,7 +102,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
                        
                         <input type="password" name="password"              minlength="8" required
                        placeholder="Password" />
-                        <select >
+                        <select class="js-example-responsive" name="country">
                            <option value="" disabled selected>Country</option>
                            <option value="1">Country 1</option>
                            <option value="2">Country 2</option>
@@ -120,28 +122,29 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
     <div class="modal">
         <div class="modal__btn"></div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
     <script src="js/slick.min.js"></script> 
     <script src="js/jquery.selectric.js"></script>
    
-
-
     <script src="js/script.js"></script>
     <script>
         $(document).ready(function () {
+            
+            $('.slider').slick({
+                appendArrows: $('.arrows .container'),
+                dots: true,
+                prevArrow: '<i class="arrow-prev fas fa-angle-left"></i>',
+
+                nextArrow: '<i class="fas fa-angle-right arrow-next"></i>'
+            });
+           
             $('select').selectric({
                disableOnMobile: false,
                nativeOnMobile: false,
                maxHeight: 100,
-                responsive: true,
+               responsive: true,
                 inheritOriginalWidth: true
-            });
-            $('.slider').slick({
-                appendArrows: $('.arrows .container'),
-                dots: true
-
             });
           
         });

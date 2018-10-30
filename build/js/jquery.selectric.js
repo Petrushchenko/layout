@@ -33,7 +33,7 @@
     n = function(t, s) {
       var l = this;
       (l.element = t),
-        (l.$element = e(t)),
+        (l.$element = e(t)),    
         (l.state = {
           multiple: !!l.$element.attr("multiple"),
           enabled: !1,
