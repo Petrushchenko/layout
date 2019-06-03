@@ -23,6 +23,9 @@
         justify-self: end;
 
     }
+    &__container {
+        min-height: 47px;
+    }
     .nav {
         grid-column: 3 /span 8;
         text-align: center;
@@ -82,7 +85,9 @@
     &:hover {
         cursor:pointer;
         background-image: linear-gradient( 90deg, $green-color 0%, lighten($green-color, 10%) 100%);
-
+    }
+    &:focus {
+        box-shadow: 0 0 5px $white-color;
     }
 }
 
@@ -124,7 +129,7 @@
             p {
                 margin: 0 0 50px;
                 font-family: "Roboto-Thin";
-
+                text-align: center;
             }
         }
         &__btn {
@@ -145,7 +150,7 @@
     }
 }
 .main {
-    padding: 65px 0 80px;
+    padding: 65px 10px 80px;
     &__text {
         grid-column: 1 /span 6;
         font-family:"Roboto-Light";
@@ -162,9 +167,15 @@
         }
     }
     &__img {
-       background-image: url(../images/cup.png);
-       height:100%;
+        height:100%;
         grid-column: 8 /span 5;
+        opacity:0;
+        transition:all .5s;
+        transform:translateX(30%) scale(0.95);
+        &.active {
+            opacity:1;
+            transform:translateX(0%) scale(1);
+        }
     }
 }
 .form {
